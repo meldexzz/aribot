@@ -1,5 +1,17 @@
-let handler = async (m, { conn }) => {
-    let menu = `Hola! Soy 𝘼𝙧𝙮𝘽𝙤𝙩.🌱
+import moment from 'moment-timezone';
+
+let handler = async (m, { conn, args }) => {
+    let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
+    let user = global.db.data.users[userId];
+    let name = conn.getName(userId);
+    let _uptime = process.uptime() * 1000;
+    let uptime = clockString(_uptime);
+    let totalreg = Object.keys(global.db.data.users).length;
+    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+    
+    let txt = `
+Hola! Soy 𝘼𝙧𝙮𝘽𝙤𝙩.🌱
+    
 Aquí tienes la lista de comandos
 • :･ﾟ⊹˚• `『 𝘐𝘯𝘧𝘰-𝘉𝘰𝘵 』` •˚⊹:･ﾟ•
 ❍ 𝘊𝘰𝘮𝘢𝘯𝘥𝘰𝘴 𝘱𝘢𝘳𝘢 𝘷𝘦𝘳 𝘦𝘴𝘵𝘢𝘥𝘰 𝘦 𝘪𝘯𝘧𝘰𝘳𝘮𝘢𝘤𝘪ó𝘯 𝘥𝘦 𝘭𝘢 𝘉𝘰𝘵.
@@ -466,10 +478,41 @@ Aquí tienes la lista de comandos
 🌱 *#𝘱𝘷𝘱 • #𝘴𝘶𝘪𝘵* + <𝘮𝘦𝘯𝘤𝘪𝘰𝘯>
 > ✦ 𝘑𝘶𝘦𝘨𝘢 𝘶𝘯 𝘱𝘷𝘱 𝘤𝘰𝘯𝘵𝘳𝘢 𝘰𝘵𝘳𝘰 𝘶𝘴𝘶𝘢𝘳𝘪𝘰.
 🌱 *#𝘵𝘵𝘵*
-> ✦ 𝘊𝘳𝘦𝘢 𝘶𝘯𝘢 𝘴𝘢𝘭𝘢 𝘥𝘦 𝘫𝘶𝘦𝘨𝘰. `;
- 
-    conn.sendMessage(m.chat, { text: menu }, { quoted: m });
+> ✦ 𝘊𝘳𝘦𝘢 𝘶𝘯𝘢 𝘴𝘢𝘭𝘢 𝘥𝘦 𝘫𝘶𝘦𝘨𝘰. 
+`.trim();
+     await conn.sendMessage(m.chat, { 
+      text: txt,
+      contextInfo: {
+          mentionedJid: [m.sender, userId],
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+              newsletterJid: channelRD.id,
+              newsletterName: channelRD.name,
+              serverMessageId: -1,
+          },
+          forwardingScore: 999,
+          externalAdReply: {
+              title: botname,
+              body: textbot,
+              thumbnailUrl: banner,
+              mediaType: 1,
+              showAdAttribution: true,
+              renderLargerThumbnail: true,
+          },
+      },
+  }, { quoted: m });
+
 };
 
-handler.command = ['menu'];
+handler.help = ['menu'];
+handler.tags = ['main'];
+handler.command = ['menu', 'menú', 'help'];
+
 export default handler;
+
+function clockString(ms) {
+    let seconds = Math.floor((ms / 1000) % 60);
+    let minutes = Math.floor((ms / (1000 * 60)) % 60);
+    let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+    return `${hours}h ${minutes}m ${seconds}s`;
+}
