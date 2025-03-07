@@ -10,15 +10,16 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     
     let txt = `
-¡𝙃𝙊𝙇𝘼!, 𝙨𝙤𝙮 *${botname}*  
-𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙞𝙙𝙤 𝙖𝙡 𝙢𝙚𝙣ú:
+Hola! Soy  *${botname}*  ٩(˘◡˘)۶
+Aquí tienes la lista de comandos
 ╭┈ ↷
-│🌱  𝙐𝙨𝙪𝙖𝙧𝙞𝙤: @${userId.split('@')[0]}
-│🌱  𝙈𝙤𝙙𝙤: 𝘗𝘶𝘣𝘭𝘪𝘤𝘰
-│🌱  𝘽𝙤𝙩: ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-│🌱  𝘼𝙘𝙩𝙞𝙫𝙖𝙙𝙖: ${uptime}
-│🌱  𝙐𝙨𝙪𝙖𝙧𝙞𝙤𝙨: ${totalreg}
-│🌱  𝘾𝙤𝙢𝙖𝙣𝙙𝙤𝙨: ${totalCommands}
+│ᰔᩚ Cliente » @${userId.split('@')[0]}
+│❀ Modo » Publico
+│✦ Bot » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
+│ⴵ Activada » ${uptime}
+│✰ Usuarios » ${totalreg}
+│✧ Comandos » ${totalCommands}
+│🜸 Baileys » Multi Device
 ╰─────────────────
 
 • :･ﾟ⊹˚• \`『 𝘐𝘯𝘧𝘰-𝘉𝘰𝘵 』\` •˚⊹:･ﾟ•
