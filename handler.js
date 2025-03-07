@@ -180,7 +180,7 @@ chat.antiLink = true
 if (!('antiLink2' in chat))
 chat.antiLink2 = false
 if (!('reaction' in chat))
-chat.reaction = true
+chat.reaction = false
 if (!('nsfw' in chat))
 chat.reaction = false
 if (!('simi' in chat))
@@ -217,7 +217,7 @@ antiver: false,
 antifake: false,
 antitoxic: false, 
 antiTraba: false,
-reaction: true,
+reaction: false,
 nsfw: false,
 autosticker: false,
 expired: 0, 
@@ -559,7 +559,7 @@ if (settingsREAD.autoread2) await this.readMessages([m.key])
 // await conn.sendPresenceUpdate('composing', m.chat)
 // this.sendPresenceUpdate('recording', m.chat)
 
-if (db.data.chats[m.chat].reaction && m.text.match(/(netflix|hola|ari|ary|gracias|nombre|disney|hbomax|max|vix|paramount)) {
+if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|yuki|a|s)/gi)) {
 let emot = pickRandom(["🍟", "😃", "😄", "😁", "😆", "🍓", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "🌺", "🌸", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🌟", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "💫", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😶‍🌫️", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🫣", "🤭", "🤖", "🍭", "🤫", "🫠", "🤥", "😶", "📇", "😐", "💧", "😑", "🫨", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😮‍💨", "😵", "😵‍💫", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", "🤠", "😈", "👿", "👺", "🧿", "🌩", "👻", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🫶", "👍", "✌️", "🙏", "🫵", "🤏", "🤌", "☝️", "🖕", "🙏", "🫵", "🫂", "🐱", "🤹‍♀️", "🤹‍♂️", "🗿", "✨", "⚡", "🔥", "🌈", "🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎", "💔", "❤️‍🔥", "❤️‍🩹", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "🚩", "👊", "⚡️", "💋", "🫰", "💅", "👑", "🐣", "🐤", "🐈"])
 if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
 }
@@ -603,7 +603,7 @@ group: `El comando *${comando}* solo puede ser usado en grupos. 🌱`,
 private: `El comando *${comando}* solo puede ser usado al chat privado del bot. 🌱`,
 admin: `El comando *${comando}* solo puede ser usado por los administradores del grupo. 🌱`, 
 botAdmin: `Para ejecutar el comando *${comando}* debo ser administrador del grupo. 🌱`,
-unreg: `El comando *${comando}* solo puede ser usado por los usuarios registrados, registrate usando:\n> » #${verifyaleatorio} ${user2}.${edadaleatoria} 🌱`,
+unreg: `El comando *${comando}* solo puede ser usado por los usuarios registrado, registrate usando:\n> » #${verifyaleatorio} ${user2}.${edadaleatoria}`,
 restrict: `Esta caracteristica está desactivada. 🌱`
 }[type];
 if (msg) return m.reply(msg).then(_ => m.react('✖️'))}
