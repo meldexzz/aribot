@@ -16,24 +16,14 @@ global.botNumber = '' //Ejemplo: 573218138672
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-  ['584120346669', '🜲 Propietario 🜲', true],
-  ['5218715746374'],
-  ['595972157130'],
-  ['5212441357601'],
-  ['50557865603'],
-  ['5216671548329'],
-  ['584148256527'],
-  ['5212431268546'],
-  ['584128382768'],
-  ['5216646666666'],
-  ['5219666666666'],
-  ['593968263524']
+  ['5219997838638', '🜲 Propietario 🜲', true],
+  ['5215649707515'],
 ];
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.mods = []
-global.suittag = ['584120346669'] 
+global.suittag = ['5219997838638'] 
 global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -43,27 +33,27 @@ global.baileys = 'V 6.7.13'
 global.languaje = 'Español'
 global.vs = '2.2.0'
 global.vsJB = '5.0'
-global.nameqr = 'YukiBot-MD'
-global.namebot = '✿◟Yυƙι-Sυσυ-Bσƚ◞✿'
+global.nameqr = '𝘼𝙧𝙞𝘽𝙤𝙩 / 𝙈𝙚𝙡𝙙𝙚𝙭𝙯𝙯.🌱'
+global.namebot = '𝘼𝙧𝙞𝘽𝙤𝙩.🌱'
 global.sessions = 'Sessions'
 global.jadi = 'JadiBots' 
 global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐘𝐮𝐤𝐢-𝐒𝐮𝐨𝐮-𝐁𝐨𝐭 ✰⪜'
-global.botname = 'ᥡᥙkі-sᥙ᥆ᥙ-ᑲ᥆𝗍'
-global.wm = 'ৎ୭࠭͢𝐘𝐮𝐤𝐢_𝐒𝐮𝐨𝐮-𝐁𝐨𝐭ⷭ𓆪͟͞ '
-global.author = 'Made By ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.textbot = 'Yυƙι-Sυσυ-Bσƚ • Powered By ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.etiqueta = 'ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
+global.packname = '𝘼𝙧𝙞𝘽𝙤𝙩 / 𝙈𝙚𝙡𝙙𝙚𝙭𝙯𝙯.🌱'
+global.botname = '𝘼𝙧𝙞𝘽𝙤𝙩.🌱 '
+global.wm = ''
+global.author = 'Made By Meldexzz'
+global.dev = 'Power By Ary'
+global.textbot = '𝘼𝙧𝙞𝘽𝙤𝙩.🌱 / 𝙋𝙤𝙬𝙚𝙧 𝘽𝙮 𝘼𝙧𝙮.'
+global.etiqueta = '𝙄´𝙖𝙢 𝘼𝙧𝙞𝘽𝙤𝙩.🌱'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.moneda = '¥enes'
-global.welcom1 = '❍ Edita Con El Comando setwelcome'
-global.welcom2 = '❍ Edita Con El Comando setbye'
+global.moneda = 'AriCoins'
+global.welcom1 = '𝙀𝙙𝙞𝙩𝙖 𝘾𝙤𝙣 𝙀𝙡 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙚𝙩𝙬𝙚𝙡𝙘𝙤𝙢𝙚. 🌱'
+global.welcom2 = '𝙀𝙙𝙞𝙩𝙖 𝙘𝙤𝙣 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙚𝙩𝙗𝙮𝙚.🌱'
 global.banner = 'https://tinyurl.com/27d7rnhu'
 global.avatar = 'https://tinyurl.com/25ru293g'
 
@@ -74,13 +64,13 @@ global.photoSity = [catalogo]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.gp1 = 'https://chat.whatsapp.com/Ecz881bBgqPIWjDOaKkp7E'
-global.comunidad1 = 'https://chat.whatsapp.com/EwrwcGvpLf1BnMhP3B4axD'
-global.channel = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'
-global.channel2 = 'https://whatsapp.com/channel/0029VavzewJLikg78gILRn1o'
-global.md = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot'
-global.correo = 'thekingdestroy507@gmail.com'
-global.cn ='https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T';
+global.gp1 = 'https://chat.whatsapp.com/InclznSV3vB95TLMaLPmaZ'
+global.comunidad1 = 'https://chat.whatsapp.com/InclznSV3vB95TLMaLPmaZ'
+global.channel = 'https://whatsapp.com/channel/0029Vb7mVMi1CYoUH5Egmb1w'
+global.channel2 = 'https://whatsapp.com/channel/0029Vb7mVMi1CYoUH5Egmb1w'
+global.md = ''
+global.correo = 'streamingbyary@gmail.com'
+global.cn ='https://whatsapp.com/channel/0029Vb7mVMi1CYoUH5Egmb1w';
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
