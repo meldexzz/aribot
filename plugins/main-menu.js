@@ -10,7 +10,7 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     
     let txt = `
-Hola! Soy  *${botname}*  ٩(˘◡˘)۶
+Hola! Soy 𝘼𝙧𝙮𝘽𝙤𝙩.🌱
 Aquí tienes la lista de comandos
 
 
