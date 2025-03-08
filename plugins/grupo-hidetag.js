@@ -1,4 +1,3 @@
-//code traído por Xi_Crew
 import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
 import * as fs from 'fs'
 
@@ -11,7 +10,8 @@ try {
 let users = participants.map(u => conn.decodeJid(u.id))
 let q = m.quoted ? m.quoted : m || m.text || m.sender
 let c = m.quoted ? await m.getQuotedObj() : m.msg || m.text || m.sender
-let msg = conn.cMod(m.chat, generateWAMessageFromContent(m.chat, { [m.quoted ? q.mtype : 'extendedTextMessage']: m.quoted ? c.message[q.mtype] : { text: '' || c }}, { quoted: null, userJid: conn.user.id }), text || q.text, conn.user.jid, { mentions: users })
+let messageText = `${text || q.text}\n\n𝘼𝙧𝙞𝘽𝙤𝙩.🌱\n☆━━━━━━━☆`
+let msg = conn.cMod(m.chat, generateWAMessageFromContent(m.chat, { [m.quoted ? q.mtype : 'extendedTextMessage']: m.quoted ? c.message[q.mtype] : { text: messageText }}, { quoted: null, userJid: conn.user.id }), messageText, conn.user.jid, { mentions: users })
 await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
 
 } catch {  
@@ -26,10 +26,11 @@ let mime = (quoted.msg || quoted).mimetype || ''
 let isMedia = /image|video|sticker|audio/.test(mime)
 let more = String.fromCharCode(8206)
 let masss = more.repeat(850)
-let htextos = `${text ? text : "*Hola!!*"}`
+let htextos = `${text ? text : "*Hola!!*"}\n\n𝘼𝙧𝙞𝘽𝙤𝙩.🌱\n☆━━━━━━━☆`
+
 if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
 var mediax = await quoted.download?.()
-conn.sendMessage(m.chat, { image: mediax, mentions: users, caption: htextos, mentions: users }, { quoted: null })
+conn.sendMessage(m.chat, { image: mediax, mentions: users, caption: htextos }, { quoted: null })
 } else if ((isMedia && quoted.mtype === 'videoMessage') && htextos) {
 var mediax = await quoted.download?.()
 conn.sendMessage(m.chat, { video: mediax, mentions: users, mimetype: 'video/mp4', caption: htextos }, { quoted: null })
