@@ -491,6 +491,11 @@ let handler = async (m, { conn, args }) => {
 > ✦ 𝘊𝘳𝘦𝘢 𝘶𝘯𝘢 𝘴𝘢𝘭𝘢 𝘥𝘦 𝘫𝘶𝘦𝘨𝘰.
   `.trim();
 
+    await conn.sendMessage(m.chat, { 
+      text: txt,
+      contextInfo: {
+          mentionedJid: [m.sender, userId],
+          isForwarded: true,
           forwardingScore: 999,
           externalAdReply: {
               title: botname,
@@ -504,6 +509,7 @@ let handler = async (m, { conn, args }) => {
   }, { quoted: m });
 
 };
+
 
 handler.help = ['menu'];
 handler.tags = ['main'];
