@@ -22,7 +22,7 @@ let handler = async (m, { conn, args }) => {
 │🌱 𝙐𝙨𝙪𝙖𝙧𝙞𝙤𝙨: ${totalreg}
 │🌱 𝘾𝙤𝙢𝙖𝙣𝙙𝙤𝙨: ${totalCommands}
 │🌱 𝘽𝙖𝙞𝙡𝙚𝙮𝙨: Multi Device
-╰─────────────────
+╰───────────────
     
 * :･ﾟ⊹˚• 『 𝘐𝘯𝘧𝘰-𝘉𝘰𝘵 』 •˚⊹:･ﾟ•
 
