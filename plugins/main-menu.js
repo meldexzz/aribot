@@ -10,20 +10,19 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     
     let txt = `
-Hola! Soy  *${botname}*  ٩(˘◡˘)۶
-Aquí tienes la lista de comandos
+¡𝙃𝙤𝙡𝙖!, 𝙨𝙤𝙮: *${botname}* 🌱
+
+𝘼𝙦𝙪í 𝙩𝙞𝙚𝙣𝙚𝙨 𝙡𝙖 𝙡𝙞𝙨𝙩𝙖 𝙙𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤𝙨.🌱
 ╭┈ ↷
-│ᰔᩚ Cliente » @${userId.split('@')[0]}
-│❀ Modo » Publico
-│✦ Bot » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-│ⴵ Activada » ${uptime}
-│✰ Usuarios » ${totalreg}
-│✧ Comandos » ${totalCommands}
-│🜸 Baileys » Multi Device
+│🌱 𝘾𝙡𝙞𝙚𝙣𝙩𝙚: @${userId.split('@')[0]}
+│🌱 𝙈𝙤𝙙𝙤: Publico
+│🌱 𝘽𝙤𝙩: ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
+│🌱 𝘼𝙘𝙩𝙞𝙫𝙖𝙙𝙖: ${uptime}
+│🌱 𝙐𝙨𝙪𝙖𝙧𝙞𝙤𝙨: ${totalreg}
+│🌱 𝘾𝙤𝙢𝙖𝙣𝙙𝙤𝙨: ${totalCommands}
+│🌱 𝘽𝙖𝙞𝙡𝙚𝙮𝙨: Multi Device
 ╰─────────────────
-Hola! Soy
     
-Aquí tienes la lista de comandos
 * :･ﾟ⊹˚• 『 𝘐𝘯𝘧𝘰-𝘉𝘰𝘵 』 •˚⊹:･ﾟ•
 ❍ 𝘊𝘰𝘮𝘢𝘯𝘥𝘰𝘴 𝘱𝘢𝘳𝘢 𝘷𝘦𝘳 𝘦𝘴𝘵𝘢𝘥𝘰 𝘦 𝘪𝘯𝘧𝘰𝘳𝘮𝘢𝘤𝘪ó𝘯 𝘥𝘦 𝘭𝘢 𝘉𝘰𝘵.
 🌱 #𝘩𝘦𝘭𝘱 • #𝘮𝘦𝘯𝘶
@@ -491,16 +490,7 @@ Aquí tienes la lista de comandos
 🌱 #𝘵𝘵𝘵
 > ✦ 𝘊𝘳𝘦𝘢 𝘶𝘯𝘢 𝘴𝘢𝘭𝘢 𝘥𝘦 𝘫𝘶𝘦𝘨𝘰.
   `.trim();
-  await conn.sendMessage(m.chat, { 
-      text: txt,
-      contextInfo: {
-          mentionedJid: [m.sender, userId],
-          isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-              newsletterJid: channelRD.id,
-              newsletterName: channelRD.name,
-              serverMessageId: -1,
-          },
+
           forwardingScore: 999,
           externalAdReply: {
               title: botname,
