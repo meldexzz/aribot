@@ -4,7 +4,6 @@ let handler = async (m, { conn }) => {
     // Definir los comandos y las rutas de los stickers en la carpeta local "stickers"
     let stickers = {
         '.entrega': './stickers/entrega.webp',
-        '.pago': './stickers/pago.webp',
         '.pagorecib': './stickers/pagorecib.webp',
         '.espera': './stickers/espera.webp',
         '.disfruta': './stickers/disfruta.webp',
@@ -32,6 +31,6 @@ let handler = async (m, { conn }) => {
     }
 };
 
-handler.command = ['entrega', 'pago', 'recib', 'espera', 'disfruta', 'invenv', 'renovacionecit', 'hastamañana', 'repo', 'relax', 'contactame', 'fueraservicio', 'gracias', 'soporte', 'refe'];
+handler.command = ['entrega', 'pagorecib', 'espera', 'disfruta', 'invenv', 'renovacionecit', 'hastamañana', 'repo', 'relax', 'contactame', 'fueraservicio', 'gracias', 'soporte', 'refe'];
 handler.group = true;
 export default handler;
