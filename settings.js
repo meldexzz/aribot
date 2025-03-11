@@ -54,8 +54,8 @@ global.etiqueta = '𝙄´𝙖𝙢 𝘼𝙧𝙞𝘽𝙤𝙩.🌱'
 global.moneda = 'AriCoins'
 global.welcom1 = '𝙀𝙙𝙞𝙩𝙖 𝘾𝙤𝙣 𝙀𝙡 𝘾𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙚𝙩𝙬𝙚𝙡𝙘𝙤𝙢𝙚. 🌱'
 global.welcom2 = '𝙀𝙙𝙞𝙩𝙖 𝙘𝙤𝙣 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙚𝙩𝙗𝙮𝙚.🌱'
-global.banner = 'https://tinyurl.com/27d7rnhu'
-global.avatar = 'https://tinyurl.com/25ru293g'
+global.banner = './src/catalogo.jpg'
+global.avatar = './src/catalogo.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
