@@ -5,7 +5,7 @@ let handler = async (m, { conn }) => {
     let stickers = {
         '.entrega': './stickers/entrega.webp',
         '.pago': './stickers/pago.webp',
-        '.recib': './stickers/recib.webp',
+        '.pagorecib': './stickers/pagorecib.webp',
         '.espera': './stickers/espera.webp',
         '.disfruta': './stickers/disfruta.webp',
         '.invenv': './stickers/invenv.webp',
