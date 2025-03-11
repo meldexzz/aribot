@@ -8,6 +8,9 @@ let handler = async (m, { conn, args }) => {
     let uptime = clockString(_uptime);
     let totalreg = Object.keys(global.db.data.users).length;
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+
+    // Ruta de la imagen
+    let imagePath = './src/catalogo.jpg';
     
     let txt = `
 ¡𝙃𝙤𝙡𝙖!, 𝙨𝙤𝙮: ${botname} 
