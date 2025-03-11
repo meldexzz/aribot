@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) => {
     let chat = global.db.data.chats[m.chat];
 
-    // Mensajes predeterminados para cada plataforma
+    // Definir las plataformas con sus URLs y mensajes predeterminados
     let platforms = {
         '.netflix': {
             img: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/Netflix_Logo.png',
@@ -41,32 +41,37 @@ let handler = async (m, { conn }) => {
         }
     };
 
-    // Verifica si el mensaje contiene un comando válido
+    // Comprobar si el comando recibido corresponde a una plataforma y enviar la imagen + mensaje
     if (platforms[m.text.trim().toLowerCase()]) {
         let platform = platforms[m.text.trim().toLowerCase()];
 
-        // Envía la imagen y el mensaje correspondiente
+        // Enviar la imagen y el mensaje correspondiente
         await conn.sendMessage(m.chat, { 
             image: { url: platform.img }, 
             caption: platform.message 
         }, { quoted: m });
     }
-    // Verifica si el comando es para cambiar el mensaje
+    // Verificar si el mensaje comienza con .set para cambiar el mensaje de la plataforma
     else if (m.text.startsWith('.set')) {
-        let platform = m.text.split(' ')[0].toLowerCase();
-        let newMessage = m.text.split(' ').slice(1).join(' ');
+        // Extraer el nombre de la plataforma y el nuevo mensaje
+        let args = m.text.split(' ');
+        let platformKey = '.' + args[0].toLowerCase().replace('.set', '');  // Ejemplo: .setnetflix -> .netflix
+        let newMessage = args.slice(1).join(' ');
 
-        if (platforms[platform]) {
-            platforms[platform].message = newMessage;
-            await conn.reply(m.chat, `Mensaje para ${platform} actualizado: ${newMessage}`, m);
+        // Si la plataforma es válida, cambiar el mensaje
+        if (platforms[platformKey]) {
+            platforms[platformKey].message = newMessage;
+            await conn.reply(m.chat, `Mensaje para ${platformKey} actualizado: ${newMessage}`, m);
         } else {
-            await conn.reply(m.chat, `Plataforma no reconocida. Usa uno de los siguientes comandos: .netflix, .plex, .spotify, etc.`, m);
+            // Si no se reconoce la plataforma
+            await conn.reply(m.chat, "Plataforma no reconocida. Usa uno de los siguientes: .netflix, .plex, .spotify, etc.", m);
         }
     } else {
+        // Mensaje por defecto si no es un comando reconocido
         await conn.reply(m.chat, "Comando no reconocido. Usa uno de los siguientes: .netflix, .plex, .spotify, etc.", m);
     }
 };
 
-handler.command = ['netflix', 'plex', 'spotify', 'youtube', 'canva', 'disney', 'hbomax', 'office', 'capcut'];
+handler.command = ['netflix', 'plex', 'spotify', 'youtube', 'canva', 'disney', 'hbomax', 'office', 'capcut']; // Comandos para mostrar la imagen y mensaje
 handler.group = true;
 export default handler;
