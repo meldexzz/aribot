@@ -5,7 +5,7 @@ let handler = async (m, { conn }) => {
 
   exec('git pull', (err, stdout, stderr) => {
     if (err) {
-      conn.reply(m.chat, `${msm} Error: No se pudo realizar la actualización.\nRazón: ${err.message}`, m);
+      conn.reply(m.chat, `${msm} Error: No se pudo realizar la actualización.\nRazón:`, m);
       return;
     }
 
