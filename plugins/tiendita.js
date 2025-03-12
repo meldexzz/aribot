@@ -63,9 +63,9 @@ let handler = async (m, { conn, usedPrefix }) => {
     m.react('🛍️');
 };
 
-handler.help = ['tiendita'];
+handler.help = ['tienda'];
 handler.tags = ['información'];
-handler.command = ['tiendita'];  // El comando será '.tiendita'
+handler.command = ['tienda'];  // El comando será '.tiendita'
 handler.group = true;
 
 export default handler;
