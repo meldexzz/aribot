@@ -1,3 +1,5 @@
+const fs = require('fs'); // Para leer archivos locales
+
 let handler = async (m, { conn, usedPrefix }) => {
     let str = `╔═══════════════╗
 ┇➤𝙏𝙄𝙀𝙉𝘿𝙄𝙏𝘼 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮
@@ -53,16 +55,16 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮`;
 
-    // URL de la imagen directa de Google
-    let imageUrl = '.plataformas/tiendita.jpg';  // Ruta local de la imagen
+    // Ruta local de la imagen
+    let imageUrl = './aribot/plataformas/tiendita.jpg';  // Ruta relativa local
 
     // Si el mensaje es en un grupo
     if (m.isGroup) {
         let mentions = [m.sender];  // Mencionamos a quien mandó el comando
-        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: str, mentions }, { quoted: m });
+        await conn.sendMessage(m.chat, { image: fs.createReadStream(imageUrl), caption: str, mentions }, { quoted: m });
     } else {
         // Si no es en un grupo, solo se envía el mensaje con la imagen
-        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: str }, { quoted: m });
+        await conn.sendMessage(m.chat, { image: fs.createReadStream(imageUrl), caption: str }, { quoted: m });
     }
 
     // Reacción del bot, puede cambiarse el emoji.
