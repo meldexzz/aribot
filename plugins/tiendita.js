@@ -53,6 +53,18 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮`;
 
+    // URL de la imagen directa de Google
+    let imageUrl = '';  // Ruta local de la imagen
+
+    // Si el mensaje es en un grupo
+    if (m.isGroup) {
+        let mentions = [m.sender];  // Mencionamos a quien mandó el comando
+        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: str, mentions }, { quoted: m });
+    } else {
+        // Si no es en un grupo, solo se envía el mensaje con la imagen
+        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: str }, { quoted: m });
+    }
+
     // Reacción del bot, puede cambiarse el emoji.
     m.react('🛍️');
 };
