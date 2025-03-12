@@ -54,7 +54,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮`;
 
     // URL de la imagen directa de Google
-    let imageUrl = './plataformas/imagen.jpg';  // Ruta local de la imagen
+    let imageUrl = '.plataformas/tiendita.jfif';  // Ruta local de la imagen
 
     // Si el mensaje es en un grupo
     if (m.isGroup) {
