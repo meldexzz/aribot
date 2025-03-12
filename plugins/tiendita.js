@@ -1,13 +1,11 @@
-const fs = require('fs'); // Para leer archivos locales
-
 let handler = async (m, { conn, usedPrefix }) => {
-    let str = `╔═══════════════╗
+    let str = ╔═══════════════╗
 ┇➤𝙏𝙄𝙀𝙉𝘿𝙄𝙏𝘼 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮
 ╚═══════════════╝
 
 ▸▸𝘾𝙊𝙈𝘼𝙉𝘿𝙊𝙎 𝘿𝙄𝙎𝙋𝙊𝙉𝙄𝘽𝙇𝙀𝙎◂◂
 
-▸▸ 𝘾𝙊𝙈𝘽𝙄𝘼𝙍 ◂◂
+▸▸ 𝘾𝙊𝙈𝙋𝘼𝙍 ◂◂
 │┊➺ 🛒 .𝘤𝘰𝘮𝘱𝘳𝘢𝘳
 │┊➺ 📦 .𝘤𝘢𝘵𝘢𝘭𝘰𝘨𝘰
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
@@ -28,12 +26,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 │┊➺ 📡 .𝘩𝘣𝘰𝘮𝘢𝘹
 │┊➺ 💼 .𝘤𝘢𝘯𝘷𝘢 𝘰𝘶𝘧𝘪𝘤𝘦
 │┊➺ ✂️ .𝘤𝘢𝘱𝘤𝘶𝘵
-│┊➺ 📜 .𝘯𝘶𝘦𝘷𝘰𝘴
-│┊➺ 📑 .𝘥𝘰𝘤𝘶
-│┊➺ 🔲 .𝘰𝘵𝘳𝘰𝘴
-│┊➺ 🔒 .𝘨𝘢𝘳𝘢𝘯𝘵𝘪𝘢
-│┊➺ 📝 .𝘳𝘦𝘨𝘭𝘢𝘴
-│┊➺ 🧾 .𝘤𝘶𝘦𝘯𝘵𝘢
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
 
 ▸▸ 𝙎𝙏𝙄𝘾𝙆𝙀𝙍𝙎 ◂◂
@@ -45,7 +37,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 │┊➺ 🔁 .𝘳𝘦𝘯𝘰𝘷𝘢𝘤𝘪𝘰𝘯𝘦𝘹𝘪𝘵
 │┊➺ 🌅 .𝘩𝘢𝘴𝘵𝘢𝘮𝘢ñ𝘢
 │┊➺ 💤 .𝘳𝘦𝘱𝘰
-│┊➺ 🧘 .𝘳𝘦𝘭𝘢𝘺
+│┊➺ 🧘 .𝘳𝘦𝘭𝘢𝘹
 │┊➺ 📱 .𝘤𝘰𝘯𝘵𝘢𝘤𝘵𝘢𝘮𝘦
 │┊➺ ❌ .𝘧𝘶𝘦𝘳𝘢𝘴𝘦𝘳𝘷𝘪𝘤𝘪𝘰
 │┊➺ 🙏 .𝘨𝘳𝘢𝘤𝘪𝘢𝘴
@@ -53,18 +45,18 @@ let handler = async (m, { conn, usedPrefix }) => {
 │┊➺ 💬 .𝘳𝘦𝘧𝘦
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙ ∙ ∙  
 
-𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮`;
+𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮;
 
-    // Ruta local de la imagen en la raíz del proyecto
-    let imageUrl = '../plataformas/tiendita.jpg';  // La imagen está en la raíz del proyecto
+    // URL de la imagen directa de Google
+    let imageUrl = 'https://www.lavanguardia.com/andro4all/hero/2022/02/trackmysubs-portada.jpg?width=1200';  // URL directa de la imagen
 
     // Si el mensaje es en un grupo
     if (m.isGroup) {
         let mentions = [m.sender];  // Mencionamos a quien mandó el comando
-        await conn.sendMessage(m.chat, { image: fs.createReadStream(imageUrl), caption: str, mentions }, { quoted: m });
+        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: str, mentions }, { quoted: m });
     } else {
         // Si no es en un grupo, solo se envía el mensaje con la imagen
-        await conn.sendMessage(m.chat, { image: fs.createReadStream(imageUrl), caption: str }, { quoted: m });
+        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: str }, { quoted: m });
     }
 
     // Reacción del bot, puede cambiarse el emoji.
