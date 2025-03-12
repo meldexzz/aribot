@@ -56,7 +56,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 𝘼𝙧𝙞𝘽𝙤𝙩 / 𝘼𝙧𝙮`;
 
     // Ruta local de la imagen en la raíz del proyecto
-    let imageUrl = './tiendita.jpg';  // La imagen está en la raíz del proyecto
+    let imageUrl = '../plataformas/tiendita.jpg';  // La imagen está en la raíz del proyecto
 
     // Si el mensaje es en un grupo
     if (m.isGroup) {
