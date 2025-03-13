@@ -10,6 +10,6 @@ let handler = async (m, { conn }) => {
     }
 };
 
-handler.command = ['youtube'];
+handler.command = ['youtubee'];
 handler.group = true;
 export default handler;
